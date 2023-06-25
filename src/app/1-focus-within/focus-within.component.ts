@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 import {
     FocusWithinDirective,
     FocusVarDirective,
-} from './their-solution/focus-within.directive';
+} from './solution/focus-within.directive';
 
 @Component({
     selector: 'app-focus-within',

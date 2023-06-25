@@ -5,7 +5,14 @@ import {
     inject,
 } from '@angular/core';
 import { FocusWithinService } from './focus-within.service';
-import { BehaviorSubject, Observable, Subject, takeUntil, tap } from 'rxjs';
+import {
+    BehaviorSubject,
+    Observable,
+    Subject,
+    finalize,
+    takeUntil,
+    tap,
+} from 'rxjs';
 
 // *** the whole reason for these directives was that
 // 1. the only way to expose a context/variable is using a structural directive

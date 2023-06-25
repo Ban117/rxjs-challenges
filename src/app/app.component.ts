@@ -6,6 +6,7 @@ import { RouterOutlet, RouterLink } from '@angular/router';
     standalone: true,
     imports: [RouterOutlet, RouterLink],
     template: `
+        <a routerLink="">Home</a>
         <a routerLink="1-focus-within">Focus Within</a>
         <router-outlet></router-outlet>
     `,

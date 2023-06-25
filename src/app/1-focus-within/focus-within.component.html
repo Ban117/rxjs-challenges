@@ -1,43 +1,47 @@
 <blockquote>
-  Create a single Observable stream to watch for focus being present in the area
+    Create a single Observable stream to watch for focus being present in the
+    area
 </blockquote>
-<p>Stream$ {{ focusedIn$ | async }}</p>
+
 <p>
-  <label>
-    Just an input
-    <input placeholder="Focus can be here" />
-  </label>
-  <button>I'm a button</button>
-</p>
-<div class="focus" #focusBlock>
-  <h2>Track focus in this block</h2>
-  <p>
-    <select>
-      <option>Option 1</option>
-      <option>Option 1</option>
-    </select>
-  </p>
-
-  <p>
-    <input type="date" />
+    <label>
+        Just an input
+        <input placeholder="Focus can be here" />
+    </label>
     <button>I'm a button</button>
-  </p>
+</p>
+<div class="focus" *appFocusVar="let focused$" appFocusWithin>
+    <h2>
+        Track focus in this block HERE ->
+        {{ (focused$ | async) ?? "No stream found!" }}
+    </h2>
+    <p>
+        <select>
+            <option>Option 1</option>
+            <option>Option 1</option>
+        </select>
+    </p>
 
-  <p>
-    <label>
-      <input type="radio" />
-      Option 1
-    </label>
-    <label>
-      <input type="radio" />
-      Option 2
-    </label>
-  </p>
+    <p>
+        <input type="date" />
+        <button>I'm a button</button>
+    </p>
+
+    <p>
+        <label>
+            <input type="radio" />
+            Option 1
+        </label>
+        <label>
+            <input type="radio" />
+            Option 2
+        </label>
+    </p>
 </div>
 <p>
-  <label>
-    Just an input
-    <input placeholder="Focus can be here" />
-  </label>
-  <button>I'm a button</button>
+    <label>
+        Just an input
+        <input placeholder="Focus can be here" />
+    </label>
+    <button>I'm a button</button>
 </p>
